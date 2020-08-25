@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -12,7 +11,6 @@
 </head>
 
 <body>
-
    <section>
       <div class="container">
          <div class="cart">
@@ -26,11 +24,11 @@
 
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button id="phone-minus-button" class="btn btn-default">
+                           <button onclick="handleProductChange(false)" class="btn btn-default">
                               <i class="fas fa-minus"></i>
                            </button>
                            <input id="phone-cart-no" type="text" class="form-control text-center" value="1">
-                           <button id="phone-plus-button" class="btn btn-default">
+                           <button onclick="handleProductChange(true)" class="btn btn-default">
                               <i class="fas fa-plus"></i>
                            </button>
                         </div>
@@ -48,11 +46,11 @@
                      </div>
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button id="case-minus-button" class="btn btn-default">
+                           <button onclick="handleCaseChange(false)" class="btn btn-default">
                               <i class="fas fa-minus"></i>
                            </button>
                            <input id="case-cart-no" type="text" class="form-control text-center" value="1">
-                           <button id="case-plus-button" class="btn btn-default">
+                           <button onclick="handleCaseChange(true)" class="btn btn-default">
                               <i class="fas fa-plus"></i>
                            </button>
 
@@ -74,7 +72,7 @@
 
                      <div class="col-md-4 status">
                         <h5>$ <span id="sub-total">00</span></h5>
-                        <h5>$0</h5>
+                        <h5>$ <span id="tax"></span> </h5>
                         <h5>$ <span id="total-amount">00</span></h5>
                      </div>
                   </div>
@@ -87,7 +85,7 @@
       </div>
    </section>
 </body>
-<script>
+<!-- <script>
    //Phone plus Button Event handler
    const phonePlusButtonCheck = document.getElementById("phone-plus-button");
    phonePlusButtonCheck.addEventListener("click", function(){
@@ -160,6 +158,8 @@
        document.getElementById(firstId).innerText = document.getElementById(secondId).innerText;
       
    }
-</script>
+</script> -->
+
+<script src="app.js"></script>
 
 </html>
